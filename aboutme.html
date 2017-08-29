@@ -1,51 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head> 
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
-<h1 align="center">Mely Arias</h1>
-<style>
-  img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 200px;
-}
-h1{
-  font-size:60px;
-  font-family:helvetica;
-  color: White;}
-   p{color:white;
-     font-size:30px;}
-body {
-background-image: url('http://fungyung.com/data/out/103/63265087-smooth-wallpapers.jpeg');
-background-size: cover;
-    border-radius:5px;
-}
-h2  {color:white;
-     font-size:40px;}
-h2 {
-    border: 2px solid powderblue;
-    padding-right: 60px;
-  display:inline;
-  }
 
-</style>
-</head>
-<body>
-<img src="webpic.jpg" alt="Profile Photo"style="width:304px;height:228px;float:left;">
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="img_fjords.jpg" style="width:100%">
+  <img class="mySlides" src="img_lights.jpg" style="width:100%">
+  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 </body>
-</head>
-</style>
- 
-<h2>Biography</h2>
- <p> High School: Newark Tech<br> Date of Birth: 06/29/2000 <br>Birth Place: Dominican Republic <br><br><br><br><br></p>
-  <h2>Likes</h2>
-    <p>Debating<br>Playing the Piano<br>Coding</p>
-  <h2>Dislikes</h2>
-    <p>Disorganization</p>
-    <h2>Fun Fact</h2>
-    <p>I have more than 10 nicknames<br>I've interned at 3 different Law Firms</p>
-  <h2>Favorite Webpages</h2>
-  <p><a href="https://www.facebook.com/">Facebook</a><br><a href="https://www.youtube.com/">Youtube</a><br><a href="https://www.pinterest.com/">Pinterest</a>
-  </p>
+</html>
