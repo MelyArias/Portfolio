@@ -139,27 +139,18 @@ form > input, form > textarea, form > label {
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: melyarias3@gmail.com</p>
     </div><br>
     <p>Lets get in touch. Send me a message:</p>
-<div class="container">
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
-</div>
+ <form name="contact" method="post">
+ <label>Name</label>
+ <input type="text" name="name" />
+ <label>Subject</label>
+ <input type="text" name="subject" />
+ <label>Phone Number</label>
+ <input type="text" name="phone" />
+ <label>Message</label>
+<textarea name="message"></textarea>
+ <input type="submit" name="send" value="Send Message" />
+ </form>
   <!-- End Contact Section -->
   </div>
   <script>
